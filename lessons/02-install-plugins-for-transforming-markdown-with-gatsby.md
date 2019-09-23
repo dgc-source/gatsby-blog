@@ -44,8 +44,8 @@ Now to the same configuration file we want to add in our plugins that we install
       {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
    ]
