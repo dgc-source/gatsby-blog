@@ -85,7 +85,7 @@ To get our posts to display in the correct order you can go back to GraphiQL and
 ```JS
 export const query = graphql`
 query HomepageQuery {
-  allMarkdownRemark(sort: {order: DESC, fields: [frontmattter___date]}) {
+  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
     edges {
       node {
         id
