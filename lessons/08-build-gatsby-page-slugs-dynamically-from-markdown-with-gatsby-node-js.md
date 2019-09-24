@@ -105,8 +105,6 @@ export default Template
              pathSlug: path
            }
          })
-
-         resolve()
        })
      })
    })
@@ -124,8 +122,6 @@ export default Template
  Then we'll add a `then` where we pass the results to a function. `result` contains a data object with the shape with the shape that matches our query. Remember that `edges` are a path to the filesystem node. So with this in mind we're going to do a `forEach`, and for each of our edges we're going to extract the path from our frontmatter.
 
  We can next call the createPage action. The first parameter is a path for the page URL. And then the component to render `component: blogPostTemplate`. And the third parameter is a `context` object that will make it's way into our blogPost template component as the prop. We want the template to know what the path to our file is `pathSlug: path`. The value of path is what is supplied in our frontmatter.
-
- After our call to the createPage we'll resolve out of the promise.
 
  Since we made changes to `gatsby-node.js`, we need to restart our develompent server. So `ctrl + c (⌘ + C for mac users)` and start the server up again with `gatsby develop`.
 
