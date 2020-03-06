@@ -24,33 +24,32 @@ So what you want to do next is create a configuration file for your plugins. So 
 Inside this file you can create the metadata for this site:
 
 ```JS
- module.exports {
-   siteMetadata: {
-     title: `My Blog`,
-     description: `This is my cool blog`
-   }
- }
+module.exports = {
+  siteMetadata: {
+    title: `My Blog`,
+    description: `This is my cool blog`,
+  },
+}
 ```
 
 Now to the same configuration file we want to add in our plugins that we installed:
 
 ```JS
- module.exports {
-   siteMetadata: {
-     title: `My Blog`,
-     description: `This is my cool blog`
-   },
-   plugins: [
-     `gatsby-transformer-reamrk`,
-      {
+module.exports = {
+  siteMetadata: {
+    title: `My Blog`,
+    description: `This is my cool blog`,
+  },
+  plugins: [
+    `gatsby-transformer-remark`, {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
       },
     },
-   ]
- }
+  ],
+}
 ```
 
 Notice how for the `gatsby-source-filestyem` we passed in an object instead of just it's name. That is because this plugin has the ability to pass in options.
